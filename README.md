@@ -1,5 +1,22 @@
 # terraform-tag-generator
 
+## Example
+
+```hcl
+module "tags" {
+  source = "github.com/wootile/terraform-tag-generator"
+
+  resource_owner    = "chenming@wootile.com"
+  project_name      = "wootile"
+  environment_name  = "test"
+  terraform_managed = "true"
+}
+
+output "result" {
+  value = module.tags.result
+}
+```
+
 <!-- BEGIN_TF_DOCS -->
 ## Requirements
 
